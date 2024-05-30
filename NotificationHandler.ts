@@ -37,7 +37,7 @@ const handleNotif = (notification: any) => {
                 notif.localNotif({
                     importance: "high",
                     message: data.message || data.text || notification?.notification?.body,
-                    title: data.title || LocalConfig.appDisplayName,
+                    title: data.title,
                     userInfo: data,
                     soundName: data.sound || "default",
                     id: notification.id
@@ -84,12 +84,6 @@ export const handleRedirection = (notification: any) => {
 export const sendNotification = async (notification: any) => {
     notif.localNotif(notification)
 }
-
-
-export const sendActionNotification = async (notification: any) => {
-    notif.localNotifWithAction(notification)
-}
-
 
 export const clearNotification = async (id: any) => {
     notif.cancelNotif(id)
