@@ -67,7 +67,7 @@ console.log("---NOTIFICATION RECEIVED---",notification);
 
 export const handleRedirection = (notification: any) => {
     console.log("----ON NOTIFICATION CLICK----")
-    notifee.getInitialNotification()
+
     if (notification && notification.data)
     {
         const { type } = notification.data
